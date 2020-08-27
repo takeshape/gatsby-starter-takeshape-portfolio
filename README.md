@@ -6,8 +6,6 @@ This is a sample project to get you started building a static website with [Take
 
 ## Quickstart
 
-<a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/gatsby-starter-takeshape-portfolio/tree/trunk/.takeshape/pattern"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
-
 1. First install the starter:
 
 ```console
