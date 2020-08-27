@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "Shape Portfolio"
+    title: "Shape Portfolio",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -15,24 +15,16 @@ module.exports = {
         background_color: "#5439D2",
         theme_color: "#5EDEB3",
         display: "minimal-ui",
-        icon: "src/images/takeshape-icon.png"
-      }
+        icon: "src/images/takeshape-icon.png",
+      },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-source-takeshape`,
       options: {
-        typeName: "TS",
-        fieldName: "takeshape",
-        url: `https://api.takeshape.io/project/${
-          process.env.TAKESHAPE_PROJECT
-        }/graphql`,
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.TAKESHAPE_TOKEN}`
-        },
-        fetchOptions: {}
-      }
+        apiKey: process.env.TAKESHAPE_TOKEN,
+        projectId: process.env.TAKESHAPE_PROJECT,
+      },
     },
-    "gatsby-plugin-offline"
-  ]
+    "gatsby-plugin-offline",
+  ],
 };

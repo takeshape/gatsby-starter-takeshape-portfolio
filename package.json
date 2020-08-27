@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-takeshape-portfolio",
-  "description": "Gatsby starter for creating a TakeShape portfolio.",
+  "description": "A Gatsby starter for creating a portfolio website with TakeShape.",
   "version": "1.0.0",
   "author": {
     "name": "TakeShape",
