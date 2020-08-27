@@ -169,8 +169,8 @@ a:hover .social-network-icon {
 /* Styles for Project pages and list entries */
 
 .project header {
-  display: flex;
-  flex-flow: row wrap;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
   align-items: baseline;
   justify-content: space-between;
   border-bottom: 1px solid #999;

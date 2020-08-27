@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { getImageUrl } from "takeshape-routing";
+import Img from "gatsby-image";
 
 import routes from "../routes";
 
@@ -12,15 +12,7 @@ const ProjectListItem = ({ project }) => {
   const includeEndYear = endYear && startYear !== endYear;
   return (
     <Link to={routes.project(project.name)} className="project">
-      <img
-        className="project__thumbnail"
-        src={getImageUrl(project.coverImage.path, {
-          h: 200,
-          w: 300,
-          fit: "crop"
-        })}
-        alt={project.description}
-      />
+      <Img fixed={project.coverImage.fixed} alt={project.description} />
       <p className="project__name">
         <strong>{project.name}</strong>
       </p>

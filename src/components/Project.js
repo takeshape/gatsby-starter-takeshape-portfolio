@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { getImageUrl } from "takeshape-routing";
+import Img from "gatsby-image";
 
 import Layout from "../layouts/default";
 
@@ -31,14 +31,9 @@ export const Project = ({ project }) => (
   <article className="project">
     <header>
       {project.coverImage ? (
-        <img
+        <Img
           className="project__cover-image"
-          alt={project.coverImage.description}
-          src={getImageUrl(project.coverImage.path, {
-            h: 600,
-            w: 1200,
-            fit: "crop"
-          })}
+          fluid={project.coverImage.fluid}
         />
       ) : (
         ""
@@ -73,6 +68,9 @@ export const query = graphql`
         coverImage {
           description
           path
+          fluid(maxWidth: 1200, maxHeight: 600) {
+            ...GatsbyTakeShapeImageFluid
+          }
         }
         client {
           name

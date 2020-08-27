@@ -1,20 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { getImageUrl } from "takeshape-routing";
+import Img from "gatsby-image";
 
 import Layout from "../layouts/default";
 
 const AboutPage = ({ data }) => (
   <Layout>
     <article className="about">
-      <img
-        className="about__portrait"
+      <Img
         alt={data.takeshape.about.portrait.description}
-        src={getImageUrl(data.takeshape.about.portrait.path, {
-          h: 150,
-          w: 150,
-          fit: "crop"
-        })}
+        fixed={data.takeshape.about.portrait.fixed}
       />
       <div
         className="about__biography"
@@ -35,6 +30,9 @@ export const query = graphql`
           title
           description
           path
+          fixed(height: 150, width: 150) {
+            ...GatsbyTakeShapeImageFixed
+          }
         }
       }
     }

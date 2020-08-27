@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
-import { getImageUrl } from "takeshape-routing";
 
 import routes from "../routes";
 
@@ -18,6 +17,9 @@ const menuQuery = graphql`
           socialNetwork
           socialNetworkIcon {
             path
+            fixed {
+              ...GatsbyTakeShapeImageFixed
+            }
           }
         }
       }
@@ -52,7 +54,7 @@ const Menu = ({ data }) => (
             >
               <img
                 className="social-network-icon"
-                src={getImageUrl(profile.socialNetworkIcon.path)}
+                src={profile.socialNetworkIcon.fixed.src}
                 alt="Social network icon"
               />
               <span className="social-network-name">
@@ -67,5 +69,5 @@ const Menu = ({ data }) => (
 );
 
 export default () => (
-  <StaticQuery query={menuQuery} render={data => <Menu data={data} />} />
+  <StaticQuery query={menuQuery} render={(data) => <Menu data={data} />} />
 );

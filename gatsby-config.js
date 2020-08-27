@@ -5,6 +5,7 @@ module.exports = {
     title: "Shape Portfolio",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,

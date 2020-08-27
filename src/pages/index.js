@@ -22,6 +22,9 @@ export const query = graphql`
           coverImage {
             description
             path
+            fixed(width: 300, height: 200) {
+              ...GatsbyTakeShapeImageFixed
+            }
           }
         }
       }

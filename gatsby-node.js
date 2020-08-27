@@ -25,8 +25,8 @@ exports.createPages = async ({ actions, graphql }) => {
       path: routes.project(name),
       component: path.resolve("./src/components/Project.js"),
       context: {
-        projectId: _id
-      }
+        projectId: _id,
+      },
     });
   });
 };
