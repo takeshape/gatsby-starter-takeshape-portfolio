@@ -8,20 +8,32 @@ This is a sample project to get you started building a static website with [Take
 
 <a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/gatsby-starter-takeshape-portfolio/tree/trunk/.takeshape/pattern"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
 
-1. Use the "Deploy to TakeShape" button to create the project in TakeShape.
-1. Set up and run the client application
-   1. Create a new API key in TakeShape and name is "Gatsby". Copy the API key into your clipboard
-   1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-portfolio-gatsbyjs`
-   1. Make a `.env` file that contains the following
-   ```
-   TAKESHAPE_PROJECT=<TAKESHAPE-PROJECT-ID-FROM-URL>
-   TAKESHAPE_TOKEN=<TAKESHAPE-API-KEY-YOU-COPIED>
-   ```
-   1. `npm install` - This will install all dependencies
-   1. `npm start` - Start the development server. It runs on [http://localhost:8000](http://localhost:8000) by default
-1. Have fun playing around with the sample site!
-   - Change some markup a template file and the site will regenerate automatically
-   - Try adding a new field to an existing content type then add it to the corresponding GraphQL query and template
+1. First install the starter:
+
+```console
+$ npx gatsby new portfolio https://github.com/takeshape/gatsby-starter-takeshape-portfolio
+```
+
+2. Next, set up your TakeShape project:
+
+```console
+$ npm run setup
+```
+
+3. Create an API Key with `Dev` permissions in your TakeShape project. Click on the project name in the upper left > API Keys > Create. Also copy your project-id from the URL (It's the long alphanumeric UUID string).
+
+4. Create a `.env` file in your project with following:
+
+```inputrc
+TAKESHAPE_PROJECT=<takeshape-project-id-from-url>
+TAKESHAPE_TOKEN=<takeshape-api-key-you-copied>
+```
+
+5. Finally, start your local development site at `http://localhost:8000`
+
+```console
+$ npm start
+```
 
 ## Deploy
 
