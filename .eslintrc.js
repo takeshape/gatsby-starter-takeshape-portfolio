@@ -1,5 +1,5 @@
 module.exports = {
-  extends: `react-app`,
+  extends: [`plugin:prettier/recommended`, `react-app`],
   globals: {
     __PATH_PREFIX__: true,
   },
