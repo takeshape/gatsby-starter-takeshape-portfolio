@@ -1,7 +1,7 @@
-import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
+import React from 'react'
+import {Link, StaticQuery, graphql} from 'gatsby'
 
-import routes from "../routes";
+import routes from '../routes'
 
 const menuQuery = graphql`
   query {
@@ -25,9 +25,9 @@ const menuQuery = graphql`
       }
     }
   }
-`;
+`
 
-const Menu = ({ data }) => (
+const Menu = ({data}) => (
   <nav className="menu">
     <div className="menu__container">
       <p className="site-name">
@@ -47,27 +47,19 @@ const Menu = ({ data }) => (
       <ul className="nostyle inline">
         {data.takeshape.about.socialProfiles.map((profile, i) => (
           <li className="social-profile" key={i}>
-            <a
-              href={profile.profileUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer">
               <img
                 className="social-network-icon"
                 src={profile.socialNetworkIcon.fixed.src}
                 alt="Social network icon"
               />
-              <span className="social-network-name">
-                {profile.socialNetwork}
-              </span>
+              <span className="social-network-name">{profile.socialNetwork}</span>
             </a>
           </li>
         ))}
       </ul>
     </div>
   </nav>
-);
+)
 
-export default () => (
-  <StaticQuery query={menuQuery} render={(data) => <Menu data={data} />} />
-);
+export default () => <StaticQuery query={menuQuery} render={(data) => <Menu data={data} />} />

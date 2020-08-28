@@ -12,7 +12,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Work Sans", Helvetica, sans-serif;
+  font-family: 'Work Sans', Helvetica, sans-serif;
   line-height: 1.4;
   background: #fafafa;
   color: #1d1d1d;
@@ -24,7 +24,7 @@ body {
 
 body::before,
 body::after {
-  content: "";
+  content: '';
   height: 1em;
   width: 100%;
   position: fixed;
@@ -233,7 +233,7 @@ a:hover .social-network-icon {
 }
 
 .project__metadata > *::after {
-  content: "/";
+  content: '/';
   color: #999;
   display: inline-block;
   margin-left: 0.5em;

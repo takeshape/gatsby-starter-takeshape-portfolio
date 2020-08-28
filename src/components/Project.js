@@ -1,18 +1,18 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react'
+import {graphql} from 'gatsby'
+import Img from 'gatsby-image'
 
-import Layout from "../layouts/default";
+import Layout from '../layouts/default'
 
-export const ProjectMetadata = ({ startDate, endDate, client }) => {
-  const startYear = new Date(startDate).getFullYear();
-  const endYear = endDate ? new Date(endDate).getFullYear() : null;
-  const includeEndYear = endYear && startYear !== endYear;
+export const ProjectMetadata = ({startDate, endDate, client}) => {
+  const startYear = new Date(startDate).getFullYear()
+  const endYear = endDate ? new Date(endDate).getFullYear() : null
+  const includeEndYear = endYear && startYear !== endYear
   return (
     <div className="project__metadata">
       <p className="project__metadata">
         {startYear}
-        {includeEndYear ? `&endash; ${endYear}` : ""}
+        {includeEndYear ? `&endash; ${endYear}` : ``}
       </p>
       {client ? (
         <p>
@@ -21,22 +21,19 @@ export const ProjectMetadata = ({ startDate, endDate, client }) => {
           </a>
         </p>
       ) : (
-        ""
+        ``
       )}
     </div>
-  );
-};
+  )
+}
 
-export const Project = ({ project }) => (
+export const Project = ({project}) => (
   <article className="project">
     <header>
       {project.coverImage ? (
-        <Img
-          className="project__cover-image"
-          fluid={project.coverImage.fluid}
-        />
+        <Img className="project__cover-image" fluid={project.coverImage.fluid} />
       ) : (
-        ""
+        ``
       )}
       <h1>{project.name}</h1>
       <ProjectMetadata
@@ -45,18 +42,15 @@ export const Project = ({ project }) => (
         client={project.client}
       />
     </header>
-    <div
-      className="project__description"
-      dangerouslySetInnerHTML={{ __html: project.description }}
-    />
+    <div className="project__description" dangerouslySetInnerHTML={{__html: project.description}} />
   </article>
-);
+)
 
-export default ({ data }) => (
+export default ({data}) => (
   <Layout>
     <Project project={data.takeshape.project} />
   </Layout>
-);
+)
 
 export const query = graphql`
   query($projectId: ID!) {
@@ -80,4 +74,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

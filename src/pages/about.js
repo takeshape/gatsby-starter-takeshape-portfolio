@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react'
+import {graphql} from 'gatsby'
+import Img from 'gatsby-image'
 
-import Layout from "../layouts/default";
+import Layout from '../layouts/default'
 
-const AboutPage = ({ data }) => (
+const AboutPage = ({data}) => (
   <Layout>
     <article className="about">
       <Img
@@ -13,13 +13,13 @@ const AboutPage = ({ data }) => (
       />
       <div
         className="about__biography"
-        dangerouslySetInnerHTML={{ __html: data.takeshape.about.biography }}
+        dangerouslySetInnerHTML={{__html: data.takeshape.about.biography}}
       />
     </article>
   </Layout>
-);
+)
 
-export default AboutPage;
+export default AboutPage
 
 export const query = graphql`
   query {
@@ -37,4 +37,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

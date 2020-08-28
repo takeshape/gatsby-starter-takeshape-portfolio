@@ -24,7 +24,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"src/**/*.js\"",
+    "format": "eslint --fix \"src/**/*.js\" && prettier --write \"src/**/*.js\"",
     "setup": "opener https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/gatsby-starter-takeshape-portfolio/tree/trunk/.takeshape/pattern",
     "start": "npm run develop",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +33,7 @@
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.1",
     "prettier-stylelint": "^0.4.2"

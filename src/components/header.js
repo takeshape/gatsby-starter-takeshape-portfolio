@@ -1,7 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react'
+import Helmet from 'react-helmet'
 
-const Header = ({ siteTitle }) => (
+const Header = ({siteTitle}) => (
   <Helmet>
     <html lang="en" />
     <title>{siteTitle}</title>
@@ -12,6 +12,6 @@ const Header = ({ siteTitle }) => (
       rel="stylesheet"
     />
   </Helmet>
-);
+)
 
-export default Header;
+export default Header
