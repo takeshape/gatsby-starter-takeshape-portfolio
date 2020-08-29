@@ -19,6 +19,9 @@
     "react-helmet": "^6.1.0",
     "slugify": "^1.4.5"
   },
+  "keywords": [
+    "gatsby"
+  ],
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",

@@ -53,9 +53,9 @@ your development process easier.
 
 ## Deploy
 
-Check our [walkthrough](https://www.takeshape.io/docs/configuring-netlify/) for
-instructions on how to deploy this Gatsby site to Netlify and trigger builds
-with TakeShape's webhooks.
+Check our walkthrough for instructions on
+[how to deploy this Gatsby site to Netlify](https://www.takeshape.io/docs/configuring-netlify/)
+and trigger builds with TakeShape's webhooks.
 
 ## Reach out
 
