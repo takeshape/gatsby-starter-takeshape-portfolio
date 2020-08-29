@@ -22,25 +22,17 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "clean": "gatsby clean",
+    "develop": "npm run clean && gatsby develop",
     "format": "eslint --fix \"src/**/*.js\" && prettier --write \"src/**/*.{js,css}\"",
     "setup": "opener https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/gatsby-starter-takeshape-portfolio/tree/trunk/.takeshape/pattern",
-    "setup:netlify": "git config --get remote.origin.url && opener \"https://app.netlify.com/start/deploy?repository=$(git config --get remote.origin.url | sed 's/.git$//')\" || echo \"Could not find your git remote. Have you initialized your repo?\"",
     "start": "npm run develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-plugin-flowtype": "^5.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0",
     "opener": "^1.5.1",
     "prettier": "^2.1.1",
     "prettier-stylelint": "^0.4.2"
