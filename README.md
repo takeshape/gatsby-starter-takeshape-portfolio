@@ -17,6 +17,11 @@ here:
 $ npx gatsby new portfolio https://github.com/takeshape/gatsby-starter-takeshape-portfolio && cd $_
 ```
 
+> If you prefer you can simply
+> [fork this template repository](https://github.com/takeshape/gatsby-starter-takeshape-portfolio/generate)
+> and create your own repo. After you `git clone` it to your local computer, run
+> `npm install` and follow these same steps.
+
 2. Next, set up your TakeShape project. The following command will prompt you to
    import the pattern used in this starter.
 
