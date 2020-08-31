@@ -28,10 +28,7 @@ $ npm run setup
 3. Create an API Key with `Dev` permissions in your TakeShape project.
 
     - Click on the project name in the upper left > API Keys > New API Key. Save your
-      new API key somewhere.
-      
-    
-      
+      new API key somewhere.  
     - Copy and save the project ID from the URL. It looks like this, the UUID
       value between `projects` and `api-keys`:
       `https://app.takeshape.io/projects/f5767c2f-debb-4af8-8966-4d4511d99a5c/api-keys`
