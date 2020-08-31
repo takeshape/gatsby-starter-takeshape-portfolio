@@ -3,11 +3,7 @@
 
 # Gatsby Starter - TakeShape Portfolio
 
-This is a sample project to get you started building a static website with
-[TakeShape](https://www.takeshape.io) (TS) and
-[Gatsby](https://www.gatsbyjs.com/). You can see the sample project in action
-here:
-[https://shape-portfolio.takeshapesampleproject.com/](https://shape-portfolio.takeshapesampleproject.com/)
+A [Gatsby](https://www.gatsbyjs.com/) starter for creating a portfolio website with [TakeShape](https://www.takeshape.io). You can see the sample project in action here: [https://shape-portfolio.takeshapesampleproject.com/](https://shape-portfolio.takeshapesampleproject.com/)
 
 ## Quickstart
 
