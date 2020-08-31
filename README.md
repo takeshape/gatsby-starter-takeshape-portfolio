@@ -10,7 +10,7 @@ A [Gatsby](https://www.gatsbyjs.com/) starter for creating a portfolio website w
 1. First install the starter.
 
 ```console
-$ npx gatsby new portfolio https://github.com/takeshape/gatsby-starter-takeshape-portfolio && cd $_
+$ npx gatsby new portfolio https://github.com/takeshape/gatsby-starter-takeshape-portfolio
 ```
 
 > If you prefer you can simply
@@ -22,6 +22,7 @@ $ npx gatsby new portfolio https://github.com/takeshape/gatsby-starter-takeshape
    import the pattern used in this starter.
 
 ```console
+$ cd portfolio
 $ npm run setup
 ```
 
