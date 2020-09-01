@@ -28,13 +28,13 @@ $ npm run setup
 
 3. Create an API Key with `Dev` permissions in your TakeShape project.
 
-    - Click on the project name in the upper left > API Keys > Create. Save your
-      new API key somewhere.
+    - Click on the project name in the upper left > API Keys > New API Key. Save your
+      new API key somewhere.  
     - Copy and save the project ID from the URL. It looks like this, the UUID
       value between `projects` and `api-keys`:
       `https://app.takeshape.io/projects/f5767c2f-debb-4af8-8966-4d4511d99a5c/api-keys`
 
-4. Create a `.env` file in your project with following lines:
+4. Back in your Gatsby project, create a `.env` file in your project with following lines:
 
 ```inputrc
 TAKESHAPE_PROJECT=<takeshape-project-id-from-url>
